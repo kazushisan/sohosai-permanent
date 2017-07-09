@@ -1,0 +1,431 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**color: #140017;**/
+body{
+    background-color: #f9f8f9;
+    color: #140017;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 1px;
+    font-family: 'Helvetica Neue', 'Arial', 
+"Yu Gothic", YuGothic, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 1em 0;
+    font-weight: bold;
+}
+h1{
+    font-size: 24px;
+}
+h2{
+    font-size: 18px;
+}
+p{
+    margin: 1em 0;
+}
+a{
+    font: inherit;
+    text-decoration: inherit;
+    color: #C300DE;
+}
+a:hover{
+    color: #53005E;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+li{
+    margin: 1em 0;
+    list-style-position: inside;
+}
+li::before{
+    content: "\25B6 ";
+    font-size: 0.4em;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+
+
+header#globalHeader{
+    background-color: #fff;
+    overflow: hidden;
+    position:relative;
+}
+header#globalHeader > div{
+    position: relative;
+}
+header#globalHeader a{
+    color:inherit;
+}
+header#globalHeader div.headerCover{
+    height: 480px;
+    position: relative;      
+    background-image: url(cover/0.jpg);
+    background-position: center;
+    background-size:cover;
+}
+header#globalHeader div.headerCover > div{
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+header#globalHeader div.headerCover > div.front{
+    opacity: 1;
+}
+header#globalHeader div.title{
+    height: 480px;
+    position: relative;
+    margin-top: -480px;
+}
+header#globalHeader h1{
+    font-size: 18px;
+    line-height: 1.2;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin: auto;
+    width: 152px;
+    height: 32px;
+    padding: 10px;
+    border: 3px #fff solid;
+    color: #fff;
+  font-weight: bold;
+    white-space: nowrap;
+}
+header#globalHeader h1 span{
+    display: block;
+}
+header#globalHeader h1 span:first-of-type{
+    font-size: 12px;
+}
+header#globalHeader div.menu{
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px #ddd8de solid;
+    padding: 0 30px;
+    z-index: 2;
+    background-color: #fff;
+}
+header#globalHeader.fixed > div::after{
+    height: 57px;
+    display: block;
+    content: "";
+}
+header#globalHeader.fixed div.menu{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+}
+header#globalHeader ul{
+    max-width: 100%;
+    overflow-x: scroll;
+    margin-bottom: -20px;
+    padding-bottom: 20px;
+    display: block;
+    line-height: 56px;
+    white-space: nowrap;
+}
+header#globalHeader li{
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 0 10px 1em;
+    line-height: 36px;
+    font-size: 12px;
+}
+header#globalHeader li::before{
+    display: none; /* listの行頭文字削除 */
+}
+header#globalHeader li.top{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0 9px;
+    margin: 10px 28px 10px -170px;
+    border: 2px #140017 solid;
+    color: #140017;
+    font-weight: bold;
+    white-space: nowrap;
+    width: 120px;   
+    transition: margin-left 0.5s ease;
+}
+header#globalHeader.fixed li.top{
+    margin-left: 0;
+}
+header#globalHeader li:nth-of-type(2){
+    margin-left: 0;
+}
+div#main{
+    background-color: #fff;
+    overflow: hidden;
+    position:relative;
+}
+div#main > div > div{
+    margin: 60px 30px;
+}
+div.article img{
+    display: block;
+    margin: 30px auto;
+}
+div.cover div.img{
+    width: 240px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+div.cover div.scroll{
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+}
+div.cover div.scroll > div{
+    overflow-x: scroll;
+    margin-bottom: -20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+div.cover div.item{
+    margin: 30px 0 30px 30px;
+    width: 240px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    white-space: normal;
+}
+div.cover div.item:first-of-type{
+    margin-left: 0;
+}
+div.cover a{
+    display: block;
+}
+div.cover h3{
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+div.cover p{
+    margin: 0.5em 0;
+}
+
+div.news ul{
+    display: block;
+}
+div.news li{
+    margin: 30px 0;
+    display: block;
+}
+div.news li::before{
+    display: none;
+}
+footer#globalFooter{
+    overflow: hidden;
+    position:relative;
+}
+footer#globalFooter > div{
+    margin: 60px 30px;
+}
+footer#globalFooter div.item{
+    margin: 30px 0;
+}
+@media (min-width: 600px){
+    footer#globalFooter > div{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        margin: 45px 15px;
+    }
+    footer#globalFooter div.item{
+        flex-basis: 240px;
+        flex-grow: 0;
+        padding: 15px;
+        margin: 0;
+    }
+    footer#globalFooter div.item:last-of-type{
+        flex-grow: 0;
+        flex-basis: 100%;
+    }
+}    
+@media (min-width: 1000px){
+    div#wrap::after{
+        clear: both;
+        content:"";
+        display: block;
+    }
+    header#globalHeader{
+        width: 38%;
+        position: fixed;
+        top:0;
+        bottom:0;
+        left:0;
+    }
+    header#globalHeader > div{
+        position: absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+    }
+    header#globalHeader div.headerCover{
+        position: relative;
+        height: 100%;
+    }
+    header#globalHeader div.menu, header#globalHeader.fixed div.menu{
+        position: absolute;
+        top: 0;
+        left: 30px;
+        right: auto;
+        background-color: #fff;
+        border-bottom: none;
+        padding: 30px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        z-index: auto;
+    }
+    header#globalHeader.fixed > div::after{
+        display: none;
+    }
+    header#globalHeader ul{
+        width: 178px;
+        margin-top: 88px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    header#globalHeader li, header#globalHeader li:nth-of-type(2){
+        display: block;
+        margin: 10px 0;
+        line-height: 1.5;
+        text-align: center;
+    }
+    header#globalHeader li.top,
+    header#globalHeader.fixed li.top{
+        display: none;
+    }
+    header#globalHeader div.title{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin: auto;
+        height: auto;
+    }
+    header#globalHeader h1{
+        color: #140017;
+        border-color: #140017;
+        position: absolute;
+        top: 30px;
+        right:auto;
+        bottom: auto;
+        left: 60px;
+        margin: 0;
+        z-index: 2;
+    }
+    div#main{
+        width: 62%;
+        float: right;
+    }
+    footer#globalFooter{
+        width: 62%;
+        float: right;
+    }
+}
+@media (min-width: 1400px){
+    header#globalHeader div.menu{
+        left: auto;
+        right: 247px;
+    }
+    header#globalHeader h1{
+        left: auto;
+        right: 277px;
+    }
+    div#main > div > div{
+        margin: 60px auto 60px 30px;
+        width: 780px;
+    }
+    footer#globalFooter > div{
+        margin: 45px auto 60px 15px;
+        width: 810px;
+    }
+}
