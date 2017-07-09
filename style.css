@@ -371,6 +371,7 @@ footer#globalFooter div.item{
         margin-top: 88px;
         margin-bottom: 0;
         padding-bottom: 0;
+        overflow: auto;
     }
     header#globalHeader li, header#globalHeader li:nth-of-type(2){
         display: block;
