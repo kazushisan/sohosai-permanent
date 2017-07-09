@@ -373,6 +373,7 @@ footer#globalFooter div.item{
         padding-bottom: 0;
         overflow: auto;
     }
+    
     header#globalHeader li, header#globalHeader li:nth-of-type(2){
         display: block;
         margin: 10px 0;
