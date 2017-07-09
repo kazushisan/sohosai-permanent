@@ -34,11 +34,14 @@ window.onload = function() {
     
 
     var headerCover = document.querySelector("header#globalHeader div.headerCover");
-    headerCover.style.backgroundImage = "none";
     var firstCover = document.createElement('div');
+    
     firstCover.style.backgroundImage = "url('cover/0.jpg')";
     firstCover.className = "front";
     headerCover.appendChild(firstCover);   headerCover.appendChild(document.createElement('div'));
+    
+    headerCover.style.backgroundImage = "none";
+
     
     function changeCover(){
         var coverDiv = headerCover.children;
